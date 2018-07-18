@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="cadastro">Ir para cadastro!</a>
+    <table>
+        <thead>
+            <td>Nome</td>
+            <td>CRM</td>
+            <td>Endereço</td>
+            <td>Telefone</td>
+        </thead>
+        <tbody>
+            <% for(var i=0; i<results.length; i++) {%>
+            <tr>
+                <td><%= results[i].Nome %></td>
+                <td><%= results[i].CRM %></td>
+                <td><%= results[i].Endereco%></td>
+                <td><%= results[i].Telefone%></td>
+            </tr>
+        </tbody>
+        <% } %>
+    </table>
+    <form action="/busca" method="post">
+        <button type="submit" class="btn btn-success" id="add-endereco">Deletar</button>
+    </form>
+</body>
+</html>

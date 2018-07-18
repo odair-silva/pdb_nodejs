@@ -1,0 +1,33 @@
+{
+  "name": "pdb-nodejs",
+  "version": "1.0.0",
+  "description": "Prova de nodejs - Programa de Bolsa Compasso 2018",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odair-silva/pdb_nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "http",
+    "express",
+    "lagrimas"
+  ],
+  "author": "Odair Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odair-silva/pdb_nodejs/issues"
+  },
+  "homepage": "https://github.com/odair-silva/pdb_nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-load": "^1.1.16",
+    "express-validator": "^5.2.0",
+    "mysql": "^2.16.0"
+  }
+}

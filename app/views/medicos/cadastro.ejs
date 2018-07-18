@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    
+</head>
+<body>
+    <div class="erros">
+        <%if(validationErrors) { %>
+        <ul>
+            <% for(var i=0; i<validationErrors.length; i++) {%>
+            <li><%=validationErrors[i].param%> - <%=validationErrors[i].msg%></li>
+            <% } %>
+        </ul>
+        <%}%>
+    </div>  
+    <div class="container">
+        <form action="/cadastro" method="post">
+            <div class="row">
+                <a href="busca">Voltar a listagem</a>
+            </div>
+            <div class="row">
+                <h3>Dados pessoais</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="Nome">Nome</label>
+                    <input type="text" class="form-control" name="Nome" value="" >
+                </div>
+                <div class="col-md-4">
+                    <label for="CRM">CRM</label>
+                    <input type="text" class="form-control" name="CRM" value="">
+                </div>
+                <div class="col-md-4">
+                    <label for="Nascimento">Data de Nascimento</label>
+                    <input type="date" class="form-control" name="Nascimento" value="">
+                </div>
+            </div>
+            <div id="contato">
+                <div class="row">
+                    <h3>Dados para Contato</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="Endereco">Endereco</label>
+                        <input type="text" class="form-control" name="Endereco" value="">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="Telefone">Telefone</label>
+                        <input type="tel" class="form-control" name="Telefone" value="">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success" id="add-endereco">Cadastrar</button>
+            <div class="row">
+                    <h3>Especialidades e Patologias</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-12 especialidade">
+                    <input type="checkbox" value="1" name="traumatologia" > Traumatologia
+                </div>
+                <div class="col-md-10 patologia hidden">
+                    <input type="checkbox" value="1" name="coluna" > Coluna
+                </div>
+                <div class="col-md-10 col-offset-2 patologia hidden">
+                    <input type="checkbox" value="1" name="ombro"> Ombro
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 especialidade">
+                    <input type="checkbox" value="1" name="oftalmologia" > Oftalmologia
+                </div>
+
+                <div class="col-md-10 patologia hidden">
+                    <input type="checkbox" value="1" name="cones" > Cones
+                </div>
+                <div class="col-md-10 col-offset-2 patologia hidden">
+                    <input type="checkbox" value="1" name="bastonetes"> Bastonetes
+                </div>
+            </div>
+        </form>
+    </div>
+   
+</body>
+<script id="template-novo-endereco" type="text/template">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="endereco">Endereco</label>
+            <input type="text" class="form-control" name={{endereco-name}} >
+        </div>
+        <div class="col-md-4">
+            <label for="telefone">Telefone</label>
+            <input type="tel" class="form-control" name={{telefone-name}} >
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-danger" id="remover-endereco">Deletar este dado para contato</button>
+        </div>
+    </div>
+</script>
+<script src="js/main.js"></script>
+</html>
