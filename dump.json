@@ -1,0 +1,57 @@
+[
+    {
+        "nome": "Traumatologia",
+        "enfases":[
+            {
+                "nome": "Coluna"
+            },
+            {
+                "nome": "Ombro"
+            },
+            {
+                "nome": "Tórax"
+            }
+        ]
+    },
+    {
+        "nome": "Oftalmologia",
+        "enfases":[
+            {
+                "nome": "Cones"
+            },
+            {
+                "nome": "Bastones"
+            }
+        ] 
+    },
+    {
+        "nome": "Cardiologia",
+        "enfases":[
+            {
+                "nome": "Artérias"
+            },
+            {
+                "nome": "Bastones"
+            }
+        ] 
+    },
+    {
+        "nome": "Dermatologia",
+        "enfases":[] 
+    },
+    {
+        "nome": "Neurologia",
+        "enfases":[
+            {
+                "nome": "Cerebelo"
+            },
+            {
+                "nome": "Sinapses"
+            }
+        ] 
+    },
+    {
+        "nome": "Pediatria",
+        "enfases":[] 
+    }
+]
